@@ -70,6 +70,7 @@ public class Main {
         //Enter data using BufferReader
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+
         if (showMenu) {
             System.out.println("");
             System.out.println("====================");
@@ -153,7 +154,5 @@ public class Main {
 
         writer.close();
     }
-
-
 
 }

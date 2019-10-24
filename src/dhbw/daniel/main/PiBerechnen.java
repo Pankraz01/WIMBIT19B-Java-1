@@ -29,8 +29,12 @@ public class PiBerechnen {
          * Dabei wird der Wert an 3,14159262... angenähert. Die Formel ist Rekursiv, da jede
          * Annäherung in den Vorherigen Wert addiert werden muss. Ist dies nicht der Fall, also wird der
          * vorherige Wert nicht dazu addiert, so erhalten wir nur ein Zwischenergebnis aus der Summenformel
+         *
+         * Der Input gibt an, wie oft, die For-Schleife laufen soll. Je höher, desto genauer, desto, langsamer die Rechnung
          */
-        for (double i = 0; i < 10000000; i++) { // Für i = 0; solange i kleiner als 10.000.000; Erhöhre i um 1
+        System.out.println("Bitte Anzahl der Wiederholungen angeben:");
+        double duration = ReadConsole.readInputDouble();
+        for (double i = 0; i < duration; i++) { // Für i = 0; solange i kleiner als eingegebene Duration; Erhöhre i um 1
 
             pi = pi + ((Math.pow((-1), i))/((2*i)+1))*4; // Quelle der Formel: Wikipedia
         }

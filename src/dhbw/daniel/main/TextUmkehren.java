@@ -1,5 +1,7 @@
 package dhbw.daniel.main;
 
+import java.io.IOException;
+
 /**
  *  Die Zeichen eines String werden vertauscht
  *
@@ -24,9 +26,14 @@ public class TextUmkehren {
      * Hier wird ein Input mit einem Text gegeben und ein Result, welches am Anfang leer ist.
      * Die for-Schleife macht nichts anderes als den Text von hinten nach Vorne durchzugehen
      */
-    public static void changeText() {
+    public static void changeText() throws IOException {
         String result = "";
-        String input = "Hallo, das ist ein Test";
+
+        /**
+         * Input für zum Umkehren
+         */
+        System.out.println("Bitte Text zum Umkehren eingeben");
+        String input = ReadConsole.readInputString();
 
         for (int pos = input.length(); pos > 0; pos--) { // für Position = Länge des Textes; Solange Position größer 0; verrigere Position um 1
 

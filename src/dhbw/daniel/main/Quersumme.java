@@ -6,7 +6,10 @@ public class Quersumme {
     }
 
     public static void getQuersumme() {
-        int value = 7411, digitSum = 0;
+        int value, digitSum = 0;
+
+        System.out.println("Quersumme eingeben:");
+        value = ReadConsole.readInputInt();
 
         String valueString;
         valueString = Integer.toString(value);

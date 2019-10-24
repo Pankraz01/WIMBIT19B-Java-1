@@ -1,5 +1,7 @@
 package dhbw.daniel.main;
 
+import java.io.IOException;
+
 /**
  *  Zählen der Vokale und Konsonanten
  *
@@ -24,8 +26,9 @@ public class VokaleUndKonsonanten {
      * Input ist ein String, der ein Wort oder Satz enthält.
      * Eine for-Schleife geht von Position zu Position und schaut, was das für ein Buchstabe ist
      */
-    public static void countLetters() {
-        String input = "Kontinentalumschwung der !";
+    public static void countLetters() throws IOException {
+        System.out.println("Satz zum Zählen eingeben:");
+        String input = ReadConsole.readInputString();
         int consonants = 0; // Konsonanten
         int vowels = 0;     // Vokale
         int uml = 0;        // Umlaute
@@ -56,7 +59,7 @@ public class VokaleUndKonsonanten {
         }
 
         // Ausgabe der Anzahl der Vokale, Konsonanten, ...
-        System.out.println("Das Wort " + input + "\nhat " + vowels + " Vokale, " + consonants + " Konsonanten, " + uml + " Umlaute und " + leer + " Leerzeichen bzw Satzzeichen \nLänge des Inputs: " + input.length());
+        System.out.println("Der String " + input + "\nhat " + vowels + " Vokale, " + consonants + " Konsonanten, " + uml + " Umlaute und " + leer + " Leerzeichen bzw Satzzeichen \nLänge des Inputs: " + input.length());
         Main main = new Main();
         main.menu(false);
     }
