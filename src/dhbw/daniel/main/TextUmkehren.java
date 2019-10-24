@@ -53,6 +53,8 @@ public class TextUmkehren {
         }
         // Ausgabe des Result
         System.out.println(result);
+        Main main = new Main();
+        main.menu(false);
 
     }
 }

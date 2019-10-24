@@ -57,6 +57,8 @@ public class VokaleUndKonsonanten {
 
         // Ausgabe der Anzahl der Vokale, Konsonanten, ...
         System.out.println("Das Wort " + input + "\nhat " + vowels + " Vokale, " + consonants + " Konsonanten, " + uml + " Umlaute und " + leer + " Leerzeichen bzw Satzzeichen \nLänge des Inputs: " + input.length());
+        Main main = new Main();
+        main.menu(false);
     }
 
 }

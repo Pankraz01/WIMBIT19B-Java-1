@@ -19,6 +19,8 @@ public class Quersumme {
 
 
         System.out.println("Quersumme von " + value + " ist " + digitSum);
+        Main main = new Main();
+        main.menu(false);
     }
 
 

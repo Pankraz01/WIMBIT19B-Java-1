@@ -12,10 +12,10 @@ import java.util.ArrayList;
 public class Main {
 
 
+
     public static void main(String[] args) {
         Main main = new Main();
-
-        main.menu();
+        main.menu(true);
 
 
     }
@@ -41,7 +41,7 @@ public class Main {
         System.out.print(minutes + "m ");
         System.out.println(seconds + "s");
 
-        main.menu();
+        main.menu(false);
     }
 
     public void schaltJahr(int year) {
@@ -58,27 +58,48 @@ public class Main {
         }
 
         System.out.println("Das Jahr " + year + " hat " + days + " Tage.");
-        main.menu();
+        main.menu(false);
     }
 
 
-    public void menu() {
+    public void menu(boolean showMenu) {
         Main main = new Main();
         String name;
         int year = 2000;
 
         //Enter data using BufferReader
-        BufferedReader reader =
-                new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        if (showMenu) {
+            System.out.println("");
+            System.out.println("====================");
+            System.out.println("");
+            System.out.println("Bitte Programm auswählen:");
+            System.out.println("time: Zeitumrechnung");
+            System.out.println("schalt: Schaltjahranzeige");
+            System.out.println("gui: GUI anzeigen");
+            System.out.println("restart: Neutstart des System (WIP)");
+            System.out.println("stop: Herunterfahren des System");
+            System.out.println("quersumme");
+            System.out.println("umkehren");
+            System.out.println("count letters");
+            System.out.println("calc pi");
+            System.out.println("");
+
+/*      System.out.println("");
         System.out.println("");
-        System.out.println("====================");
         System.out.println("");
-        System.out.println("Bitte Programm auswählen:");
-        System.out.println("time: Zeitumrechnung");
-        System.out.println("schalt: Schaltjahranzeige");
-        System.out.println("gui: GUI anzeigen");
-        System.out.println("restart: Neutstart des System (WIP)");
-        System.out.println("stop: Herunterfahren des System");
+        System.out.println("");
+        System.out.println("");
+*/
+        } else {
+            System.out.println("");
+            System.out.println("====================");
+            System.out.println("");
+            System.out.println("Bitte Programm auswählen:");
+        }
+
+
 
         // Reading data using readLine
         try {
@@ -115,7 +136,7 @@ public class Main {
                     break;
                 default:
                     System.out.println("Falscher Command. Zurück zum Hauptmenü");
-                    main.menu();
+                    main.menu(true);
                     break;
             }
 
@@ -133,9 +154,6 @@ public class Main {
         writer.close();
     }
 
-    public static long max(long x, long y) {
-        return x > y ? x : y;
-    }
 
 
 }

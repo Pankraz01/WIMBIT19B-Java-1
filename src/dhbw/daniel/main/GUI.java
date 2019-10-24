@@ -65,7 +65,7 @@ public class GUI {
 
         f.setVisible(true);
         Main main = new Main();
-        main.menu();
+        main.menu(false);
 
     }
 
