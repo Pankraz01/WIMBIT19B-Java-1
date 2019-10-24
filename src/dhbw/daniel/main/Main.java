@@ -133,5 +133,9 @@ public class Main {
         writer.close();
     }
 
+    public static long max(long x, long y) {
+        return x > y ? x : y;
+    }
+
 
 }

@@ -5,7 +5,6 @@ package dhbw.daniel.main;
  *
  * @author danieljuric
  * @version 1.0
- *
  *      23.10.2019
  */
 
