@@ -73,18 +73,20 @@ public class Main {
 
         if (showMenu) {
             System.out.println("");
-            System.out.println("====================");
+            System.out.println("========================================================================================================================");
             System.out.println("");
             System.out.println("Bitte Programm auswählen:");
-            System.out.println("time: Zeitumrechnung");
-            System.out.println("schalt: Schaltjahranzeige");
-            System.out.println("gui: GUI anzeigen");
-            System.out.println("restart: Neutstart des System (WIP)");
-            System.out.println("stop: Herunterfahren des System");
-            System.out.println("quersumme");
-            System.out.println("umkehren");
-            System.out.println("count letters");
-            System.out.println("calc pi");
+            System.out.println("time            Zeitumrechnung");
+            System.out.println("schalt          Schaltjahranzeige");
+            System.out.println("gui             GUI anzeigen");
+            System.out.println("restart         Neutstart des System (WIP)");
+            System.out.println("stop            Herunterfahren des System");
+            System.out.println("quersumme       Berechnet die Quersumme");
+            System.out.println("umkehren        Kehr einen Text um");
+            System.out.println("count letters   Zählt Buchstaben");
+            System.out.println("calc pi         Berechnet Pi");
+            System.out.println("check even      Prüft Gerade / Ungerade");
+            System.out.println("factorize       Zahl fakultät nehmen");
             System.out.println("");
 
 /*      System.out.println("");
@@ -95,7 +97,7 @@ public class Main {
 */
         } else {
             System.out.println("");
-            System.out.println("====================");
+            System.out.println("========================================================================================================================");
             System.out.println("");
             System.out.println("Bitte Programm auswählen:");
         }
@@ -107,7 +109,9 @@ public class Main {
             name = reader.readLine();
             switch (name) {
                 case "time":
-                    main.timeConversion(123456789);
+                    System.out.println("Zeit in Sekunden:");
+                    int time = ReadConsole.readInputInt();
+                    main.timeConversion(time);
                     break;
                 case "schalt":
                     main.schaltJahr(year);
@@ -134,6 +138,12 @@ public class Main {
                     break;
                 case "calc pi":
                     PiBerechnen.calcPi();
+                    break;
+                case "check even":
+                    Paritaetest.isEven();
+                    break;
+                case "factorize":
+                    Paritaetest.factorial();
                     break;
                 default:
                     System.out.println("Falscher Command. Zurück zum Hauptmenü");
