@@ -111,17 +111,19 @@ public class Main {
                 case "time":
                     System.out.println("Zeit in Sekunden:");
                     int time = ReadConsole.readInputInt();
-                    main.timeConversion(time);
+                    this.timeConversion(time);
                     break;
                 case "schalt":
-                    main.schaltJahr(year);
+                    this.schaltJahr(year);
                     break;
                 case "restart":
                     Restart.restartApplication();
                     System.out.println("Restart System...");
                     break;
                 case "gui":
-                    GUI.startGUI();
+                    //GUI.startGUI();
+                    System.out.println("Leider Deaktiviert");
+                    main.menu(true);
                     break;
                 case "stop":
                     System.out.println("Shutting Down...");

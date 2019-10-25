@@ -34,7 +34,7 @@ public class GUI {
                 int seconds, minutes, hours, days, years;
                 Main main = new Main();
 
-                // TODO Compute the values seconds, minutes, hours, days, years
+
 
                 seconds = totalSeconds % 60;
                 minutes = (totalSeconds / 60) % 60;

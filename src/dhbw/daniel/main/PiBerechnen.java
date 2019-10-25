@@ -41,6 +41,7 @@ public class PiBerechnen {
 
         // Ausgabe von Pi
         System.out.println("Die Kreiszahl Pi: " + pi);
+        pi = 0; // Löschen des Wertes, damit die Zahl bei erneutem Aufrufen wieder 0 ist
         Main main = new Main();
         main.menu(false);
 
