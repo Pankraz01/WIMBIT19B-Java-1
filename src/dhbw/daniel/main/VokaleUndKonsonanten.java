@@ -1,5 +1,8 @@
 package dhbw.daniel.main;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.io.IOException;
 
 /**
@@ -62,6 +65,37 @@ public class VokaleUndKonsonanten {
         System.out.println("Der String " + input + "\nhat " + vowels + " Vokale, " + consonants + " Konsonanten, " + uml + " Umlaute und " + leer + " Leerzeichen bzw Satzzeichen \nLänge des Inputs: " + input.length());
         Main main = new Main();
         main.menu(false);
+    }
+
+    public static void readabilityCheck() throws IOException {
+
+        System.out.println("Satz zum Testen eingeben:");
+        String text = ReadConsole.readInputString();
+
+        isLongSentence(text);
+        for (int pos = 0; pos < text.length(); pos++) {
+            isLongSentence(text);
+
+        }
+        System.out.println("Langer Satz: " + isLongSentence(text));
+        Main main = new Main();
+        main.menu(false);
+    }
+
+    private static boolean isLongSentence(@NotNull String text) {
+        for (int pos = 0; pos < text.length(); pos++) {
+            if (text.charAt(pos) == '.' & pos < 60) {
+                testingM(null);
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static void testingM(@Nullable String test) {
+        if (test == null) {
+            System.out.println(test);
+        }
     }
 
 }

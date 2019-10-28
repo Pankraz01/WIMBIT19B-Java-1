@@ -62,7 +62,7 @@ public class Main {
     }
 
 
-    public void menu(boolean showMenu) {
+    public void menu(boolean showMenu /* Zeigt Menü an */) {
         Main main = new Main();
         String name;
         int year = 2000;
@@ -146,6 +146,9 @@ public class Main {
                     break;
                 case "factorize":
                     Paritaetest.factorial();
+                    break;
+                case "readability":
+                    VokaleUndKonsonanten.readabilityCheck();
                     break;
                 default:
                     System.out.println("Falscher Command. Zurück zum Hauptmenü");
