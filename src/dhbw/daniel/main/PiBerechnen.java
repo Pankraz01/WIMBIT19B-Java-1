@@ -16,6 +16,7 @@ public class PiBerechnen {
      * Main Methode wird nicht verwendet
      * @param args
      */
+    @SuppressWarnings("unused")
     public static void piBerechnen(String[] args) {
         PiBerechnen piBerechnen = new PiBerechnen();
     }
@@ -36,6 +37,7 @@ public class PiBerechnen {
         double duration = ReadConsole.readInputDouble();
         for (double i = 0; i < duration; i++) { // Für i = 0; solange i kleiner als eingegebene Duration; Erhöhre i um 1
 
+
             pi = pi + ((Math.pow((-1), i))/((2*i)+1))*4; // Quelle der Formel: Wikipedia
         }
 
@@ -46,5 +48,7 @@ public class PiBerechnen {
         main.menu(false);
 
     }
+
+
 
 }

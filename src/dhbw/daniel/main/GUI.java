@@ -15,6 +15,7 @@ public class GUI {
     /**
      * Starts the GUI
      */
+    @SuppressWarnings("unused")
     public static void startGUI(){
         JFrame f = new JFrame("Hauptmenü");
         f.setSize(500, 150);

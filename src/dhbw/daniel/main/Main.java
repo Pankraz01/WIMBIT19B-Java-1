@@ -1,13 +1,8 @@
 package dhbw.daniel.main;
 
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.*;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
 
 public class Main {
 
@@ -21,7 +16,7 @@ public class Main {
     }
 
 
-    public void timeConversion(int totalSeconds) {
+    public static void timeConversion(int totalSeconds) {
         int seconds, minutes, hours, days, years;
         Main main = new Main();
 
@@ -44,7 +39,7 @@ public class Main {
         main.menu(false);
     }
 
-    public void schaltJahr(int year) {
+    public static void schaltJahr(int year) {
         int days;
         Main main = new Main();
 
@@ -62,7 +57,7 @@ public class Main {
     }
 
 
-    public void menu(boolean showMenu /* Zeigt Menü an */) {
+    public static void menu(boolean showMenu /* Zeigt Menü an */) {
         Main main = new Main();
         String name;
         int year = 2000;
@@ -73,7 +68,7 @@ public class Main {
 
         if (showMenu) {
             System.out.println("");
-            System.out.println("========================================================================================================================");
+            System.out.println("========================================================== MAIN MENU ==========================================================");
             System.out.println("");
             System.out.println("Bitte Programm auswählen:");
             System.out.println("time            Zeitumrechnung");
@@ -87,6 +82,7 @@ public class Main {
             System.out.println("calc pi         Berechnet Pi");
             System.out.println("check even      Prüft Gerade / Ungerade");
             System.out.println("factorize       Zahl fakultät nehmen");
+            System.out.println("calc            Öffnet Calculator");
             System.out.println("");
 
 /*      System.out.println("");
@@ -97,7 +93,7 @@ public class Main {
 */
         } else {
             System.out.println("");
-            System.out.println("========================================================================================================================");
+            System.out.println("========================================================== MAIN MENU ==========================================================");
             System.out.println("");
             System.out.println("Bitte Programm auswählen:");
         }
@@ -111,10 +107,10 @@ public class Main {
                 case "time":
                     System.out.println("Zeit in Sekunden:");
                     int time = ReadConsole.readInputInt();
-                    this.timeConversion(time);
+                    Main.timeConversion(time);
                     break;
                 case "schalt":
-                    this.schaltJahr(year);
+                    Main.schaltJahr(year);
                     break;
                 case "restart":
                     Restart.restartApplication();
@@ -147,9 +143,13 @@ public class Main {
                 case "factorize":
                     Paritaetest.factorial();
                     break;
-                case "readability":
-                    VokaleUndKonsonanten.readabilityCheck();
+                case "count words":
+                    VokaleUndKonsonanten.countWords();
                     break;
+                case "calc":
+                    Calculator.calculator(true);
+                    break;
+
                 default:
                     System.out.println("Falscher Command. Zurück zum Hauptmenü");
                     main.menu(true);

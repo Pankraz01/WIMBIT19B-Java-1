@@ -16,6 +16,7 @@ public class TextUmkehren {
      * @param args
      * @deprecated Wird nicht benutzt
      */
+    @SuppressWarnings("unused")
     public static void textUmkehren(String[] args) {
         TextUmkehren textUmkehren = new TextUmkehren(); // Wird nicht benutzt
     }

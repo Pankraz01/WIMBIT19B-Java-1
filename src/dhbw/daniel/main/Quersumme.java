@@ -1,6 +1,7 @@
 package dhbw.daniel.main;
 
 public class Quersumme {
+    @SuppressWarnings("unused")
     public static void quersumme(String[] args) {
      Quersumme quersumme = new Quersumme();
     }

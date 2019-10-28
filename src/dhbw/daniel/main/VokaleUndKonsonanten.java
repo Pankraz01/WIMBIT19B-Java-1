@@ -17,8 +17,8 @@ public class VokaleUndKonsonanten {
     /**
      * Main Methode
      * @param args
-     * @deprecated Wird nicht benutzt
      */
+    @SuppressWarnings("unused")
     public static void vokaleUndKonsonanten(String[] args) {
         VokaleUndKonsonanten vokaleUndKonsonanten = new VokaleUndKonsonanten();
     }
@@ -67,35 +67,28 @@ public class VokaleUndKonsonanten {
         main.menu(false);
     }
 
-    public static void readabilityCheck() throws IOException {
 
-        System.out.println("Satz zum Testen eingeben:");
-        String text = ReadConsole.readInputString();
+    public static void countWords() {
+        System.out.println("Bitte Text eingeben");
 
-        isLongSentence(text);
-        for (int pos = 0; pos < text.length(); pos++) {
-            isLongSentence(text);
-
+        String text = null;
+        try {
+            text = ReadConsole.readInputString();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        System.out.println("Langer Satz: " + isLongSentence(text));
-        Main main = new Main();
-        main.menu(false);
-    }
 
-    private static boolean isLongSentence(@NotNull String text) {
+        text = text.trim();
+        int counter = 0;
         for (int pos = 0; pos < text.length(); pos++) {
-            if (text.charAt(pos) == '.' & pos < 60) {
-                testingM(null);
-                return false;
+            if (text.charAt(pos) == ' ' ) {
+                counter++;
             }
-        }
-        return true;
-    }
 
-    private static void testingM(@Nullable String test) {
-        if (test == null) {
-            System.out.println(test);
         }
+        counter++;
+        System.out.println("Wörter: " +counter);
+        Main.menu(false);
     }
 
 }

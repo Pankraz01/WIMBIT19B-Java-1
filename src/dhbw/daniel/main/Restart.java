@@ -10,6 +10,7 @@ import java.util.ArrayList;
  */
 
 public class Restart {
+    @SuppressWarnings("unused")
     public static void restart(String[] args) {
         Restart restart = new Restart();
     }
