@@ -39,8 +39,7 @@ public class ReadConsole {
         } catch (NumberFormatException | IOException e) {
             //e.printStackTrace();
             System.out.println("Exception: Eingabe ist keine Integer");
-            Main main = new Main();
-            main.menu(true);
+            Main.menu(true);
         }
         // Standard Return Wert, wenn eine Exception throws
         return 0;
@@ -53,8 +52,7 @@ public class ReadConsole {
             return input;
         } catch (Exception e) {
             System.out.println("Exception: Eingabe ist kein Double");
-            Main main = new Main();
-            main.menu(true);
+            Main.menu(true);
         }
         return 0;
     }

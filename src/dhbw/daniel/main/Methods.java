@@ -8,6 +8,7 @@ package dhbw.daniel.main;
  */
 public class Methods {
 
+
     /**
      * Method1 ist eine Methode, in der nichts an die Aufrufende Klasse zurückgegeben wird (void)
      * wird diese Methode aufgerufen, dann Arbeitet sie Schritt für Schritt ihren inhalt ab.
@@ -71,5 +72,6 @@ public class Methods {
     public String method5(int integer /* Übergebener Wert aus der Aufrufenden Klassen */) {
         return String.valueOf(integer); // Rückgabe Wert an die Aufrufende Klasse INFO: Der Integer Wert wirt hier als String geändert (aus 5 wird dann "5")
     }
+
 
 }

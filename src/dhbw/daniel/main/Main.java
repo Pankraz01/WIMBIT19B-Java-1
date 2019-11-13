@@ -149,10 +149,17 @@ public class Main {
                 case "calc":
                     Calculator.calculator(true);
                     break;
+                case "books":
+                    Book book = new Book("Daniel Juric", "Das Buch der Bücher", 10110010, true);
+                    book.setAvailable(true);
+                    System.out.println(book);
+                    menu(false);
+                    break;
 
                 default:
                     System.out.println("Falscher Command. Zurück zum Hauptmenü");
                     main.menu(true);
+
                     break;
             }
 
