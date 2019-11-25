@@ -1,4 +1,6 @@
-package dhbw.daniel.main;
+package dhbw.daniel.showcase;
+
+import dhbw.daniel.main.Main;
 
 import java.io.File;
 import java.io.IOException;

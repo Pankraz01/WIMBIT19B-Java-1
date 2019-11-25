@@ -1,13 +1,18 @@
-package dhbw.daniel.main;
+package dhbw.daniel.calc;
 
+
+import dhbw.daniel.main.Main;
+import dhbw.daniel.main.ReadConsole;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Calculator extends Main {
-
+    @SuppressWarnings("unused") @Deprecated
     static boolean showMenu = true;
+    @SuppressWarnings("unused") @Deprecated
+    public static int[] prims;
 
     public static void calculator(boolean showMenu) throws IOException {
 
@@ -59,6 +64,11 @@ public class Calculator extends Main {
                     calculator(true);
                 }
                 break;
+            case "expo":
+                int output = ReadConsole.readInputInt();
+                intArrayExpo(output);
+                Main.menu(false);
+                break;
             /**
              * Konvertierung des HTML Codes zum jeweiligen Character
              * {@link https://unicode-table.com/de/}
@@ -70,11 +80,27 @@ public class Calculator extends Main {
                 break;
             default:
                 System.out.println("Gehe zurück zum Hauptmenü");
-                Main.menu(true);
+                menu(false);
                 break;
         }
     }
 
+
+    /**
+     * Berechnet alle Quadratzahlen von 0 bis 100 und speichert diese in ein Ingeter Array
+     * @param output Eingabe Wert zum Quadrat
+     */
+    private static void intArrayExpo(int output) {
+        int[] array = new int[101];
+        for(int i = 0; i < 101; i++) {
+            array[i] = i * i;
+        }
+        if (output > 100) {
+            System.out.println("Error: Nur zahlen bis 100");
+            return;
+        }
+        System.out.println(output + " zum Quadrat ist: " + array[output]);
+    }
 
     /**
      * Umwandlung von HTML (integer) zu Unicode Character (Char)
@@ -147,8 +173,6 @@ public class Calculator extends Main {
     private static void primTester() throws IOException {
         System.out.println("Bitte Zahl eingeben:");
         int input = ReadConsole.readInputInt();
-        @SuppressWarnings("unused")
-        boolean isPrim = true;
         int i = input-1;
         if (input <= 1) {
             System.out.println("Bitte eine Zahl über 1 eingeben.");

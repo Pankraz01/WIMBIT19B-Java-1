@@ -1,4 +1,7 @@
-package dhbw.daniel.main;
+package dhbw.daniel.calc;
+
+import dhbw.daniel.main.Main;
+import dhbw.daniel.main.ReadConsole;
 
 public class Quersumme {
     @SuppressWarnings("unused")

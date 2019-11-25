@@ -1,8 +1,27 @@
 package dhbw.daniel.main;
 
 
+import dhbw.daniel.calc.Calculator;
+import dhbw.daniel.calc.PiBerechnen;
+import dhbw.daniel.calc.Quersumme;
+import dhbw.daniel.showcase.Restart;
+import dhbw.daniel.text.Paritaetest;
+import dhbw.daniel.text.TextUmkehren;
+import dhbw.daniel.text.VokaleUndKonsonanten;
+
 import java.io.*;
 import java.net.URISyntaxException;
+
+
+/**
+ * Main Mehtode: Hauptmenüverwaltung
+ * - Prüfen ob Zahl gerade ist
+ * - Zahl Faktorisieren
+ *
+ * @author danieljuric
+ * @version 2.0
+ *      24.10.2019
+ */
 
 public class Main {
 
@@ -149,13 +168,6 @@ public class Main {
                 case "calc":
                     Calculator.calculator(true);
                     break;
-                case "books":
-                    Book book = new Book("Daniel Juric", "Das Buch der Bücher", 10110010, true);
-                    book.setAvailable(true);
-                    System.out.println(book);
-                    menu(false);
-                    break;
-
                 default:
                     System.out.println("Falscher Command. Zurück zum Hauptmenü");
                     main.menu(true);

@@ -1,7 +1,7 @@
-package dhbw.daniel.main;
+package dhbw.daniel.text;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import dhbw.daniel.main.Main;
+import dhbw.daniel.main.ReadConsole;
 
 import java.io.IOException;
 

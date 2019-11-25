@@ -1,4 +1,4 @@
-package dhbw.daniel.main;
+package dhbw.daniel.showcase;
 
 /**
  * Erkärt Methoden

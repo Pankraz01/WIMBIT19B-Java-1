@@ -1,4 +1,7 @@
-package dhbw.daniel.main;
+package dhbw.daniel.text;
+
+import dhbw.daniel.main.Main;
+import dhbw.daniel.main.ReadConsole;
 
 import java.io.IOException;
 
